@@ -1,0 +1,55 @@
+Let's make a game!
+  name:Le meilleur jeu du monde
+  author:Zevier
+  desc:Le meilleur je du monde wesh (BETA)
+  created:12/08/2022
+  updated:12/08/2022
+  version:0.1
+ 
+Settings
+  background:data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxISEhUSEhIVFRUVFRUVFRUVFRUVFRUVFRUXFhUVFRUYHSggGBolHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDQ0NFQ8PFSsZFRkrLSstLSsrLS0tKy0rKystKystKzcrNy0tNzc3Ky03Nzc3KystKy0rKysrKysrKysrK//AABEIAMIBBAMBIgACEQEDEQH/xAAYAAEBAQEBAAAAAAAAAAAAAAAAAQIDB//EABgQAQEBAQEAAAAAAAAAAAAAAAABEQIx/8QAFwEBAQEBAAAAAAAAAAAAAAAAAAECA//EABcRAQEBAQAAAAAAAAAAAAAAAAABMRH/2gAMAwEAAhEDEQA/APHEVGnQClQAFRKAAggKloAhSggACAYoAAAYCKgIKgopBAWCQqgqFoAII7iGsOiotQQDQDUABGkBKUKCFKAIqCACgAAAAgoIqFVAAFRSqIUAEVFTjqRFlc2wNJQVBNBRC0FTAAQABNAABAEBRKKKgaAAIAQABQAAENAFRR0E0YaaqGgKmiAoICpoAaIAAlEUQ0FQAAFAEEUAA0AAFAEoFVDQVEtAdECMqtoigaaAAQA1AAKiggABoACKCAKgAAAAaEEVFQUAUANETQAbEGWlABRAAEBUAAAEAAAEAAAFAEBRFAIAAAgBigCABgDYgiqAiotNAAQDAAQUEEAAAAEUVBQBFBFNAAAAFQAABAWQQFaAZFEUUEAVFTAVAUAERAAAQFQVQQAUEBQQFAAoCogpQEqoAADQCKKigAgoKCIAKBURABQABFABFAAAAAAgqAAAAIKlBdQBWgVAARRFFEFAQUBEUBBURBFFBFAAARQAAAAgAAAQVEFASgA0oI0ECQAAQAFRQBAAEVKIAAAAAAACAAoAqAAAAAAIGijQpjKgAAICggKgACAKgAAABgACAoAhoigAKAQAAAAUKADU8IDLQAqUKDKpCgqBAWaACKgAhBACgCKgCqAoHKCBQCixYChUQVFpAFh0Aiv/2Q==
+  building cost increase:110%
+  building cost refund:50%
+ 
+Layout
+  *main
+  contains:res, buttons
+  *res
+    contains:Resources
+    class:fullWidth
+  *buttons
+    header:Bonjour
+    contains:Buttons
+  *store
+    contains:buildings, upgrades
+  *buildings
+    contains:BulkDisplay, Buildings
+    header:Générateurs
+    tooltip origin:left
+  *upgrades
+    contains:Upgrades
+    header:Améliorations
+    costs:hide
+    names:hide
+  *achievs
+    in:main
+    contains:Achievements
+ 
+Buttons
+  *LeZ
+    class:bigButton hasFlares
+    on click:yield 1 Z
+    icon:https://media.discordapp.net/attachments/830225446645792788/1007657991685820466/Sans_titre_11_20220812163303.png
+    no text
+ 
+Resources
+  *Z
+    name:Z
+    icon:https://media.discordapp.net/attachments/830225446645792788/1007642809534263397/Sans_titre_10_20220812153214.png
+ 
+Buildings
+  *ZGenerator
+    name:Générateur de Z
+    cost:100 Z
+    on tick:yield 3 Z
+    icon:https://media.discordapp.net/attachments/830225446645792788/1007642809534263397/Sans_titre_10_20220812153214.png
